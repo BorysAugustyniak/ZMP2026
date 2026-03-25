@@ -22,4 +22,5 @@ int main(){
 		NWD = nwd(NWD, tab[i]);
 	}
 	cout << NWD;
+	delete [] tab;
 }
