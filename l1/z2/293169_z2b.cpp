@@ -12,7 +12,7 @@ int nwd(int a, int b){
 
 int tocjent(int n){
 	int toc = 0;
-	for (int i = 1; i < n; ++i){
+	for (int i = 1; i <= n; ++i){
 		if (nwd(i, n) == 1){
 			++toc;
 		}
@@ -21,7 +21,15 @@ int tocjent(int n){
 }
 
 int Fduze(int n){
-    return n;
+	//return n;
+	int wynik = 0;
+	for (int i = 1; i * i <= n; ++i){
+		if (n % i == 0){
+			wynik += tocjent(i);
+			wynik += (i * i == n) ? 0 : tocjent(n/i);
+		}
+	}
+	return wynik;
 }
 
 int main(){
