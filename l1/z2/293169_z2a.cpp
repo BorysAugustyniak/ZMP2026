@@ -12,7 +12,7 @@ int nwd(int a, int b){
 
 int tocjent(int n){
 	int toc = 0;
-	for (int i = 1; i < n; ++i){
+	for (int i = 1; i <= n; ++i){
 		if (nwd(i, n) == 1){
 			++toc;
 		}
